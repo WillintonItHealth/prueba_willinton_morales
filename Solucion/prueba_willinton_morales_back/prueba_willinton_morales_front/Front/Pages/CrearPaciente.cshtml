@@ -2,6 +2,8 @@
 @model Front.Pages.UsuarioModel
 
 @{
+    ViewData["Title"] = "Crear Paciente";
+
     /*if (IsPost)
     {
         string TipoDocumento = Request.Form["TipoDocumento"];
@@ -31,7 +33,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Paciente Form</title>
+    <title>Crear paciente</title>
 </head>
 <body>
     <form method="Post">
@@ -78,7 +80,7 @@
 
             <div>
                 <label>&nbsp;</label>
-                <input type="submit" value="Submit" class="submit" />
+                <input type="submit" value="Crear" class="submit" />
             </div>
         </fieldset>
     </form>
