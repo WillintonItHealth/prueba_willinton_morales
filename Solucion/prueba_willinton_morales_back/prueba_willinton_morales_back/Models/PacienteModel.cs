@@ -1,4 +1,4 @@
-﻿namespace prueba_willinton_morales_back.Models
+﻿namespace prueba_willinton_morales.Models
 {
     /// <summary>
     /// Modelo con los datos del paciente

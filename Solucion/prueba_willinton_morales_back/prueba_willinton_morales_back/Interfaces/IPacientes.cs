@@ -1,6 +1,6 @@
-﻿using prueba_willinton_morales_back.Models;
+﻿using prueba_willinton_morales.Models;
 
-namespace prueba_willinton_morales_back.Interfaces
+namespace prueba_willinton_morales.Interfaces
 {
     public interface IPacientes
     {

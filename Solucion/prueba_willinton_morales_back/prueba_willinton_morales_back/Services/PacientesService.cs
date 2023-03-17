@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Microsoft.Data.SqlClient;
-using prueba_willinton_morales_back.Interfaces;
-using prueba_willinton_morales_back.Models;
+
+using prueba_willinton_morales.Interfaces;
+using prueba_willinton_morales.Models;
+using System.Data.SqlClient;
 using System.Net.Http;
 
-namespace prueba_willinton_morales_back.Services
+namespace prueba_willinton_morales.Services
 {
     public class PacientesService : IPacientes
     {
@@ -38,6 +39,7 @@ namespace prueba_willinton_morales_back.Services
 
                     respuesta.Mensaje = "Paciente creado correctamente";
                     respuesta.Estado = true;
+
                     return respuesta;
                 }
                 catch (System.Exception ex)
@@ -45,6 +47,7 @@ namespace prueba_willinton_morales_back.Services
                     respuesta.Mensaje = "Error al crear paciente";
                     respuesta.Estado = false;
                     respuesta.Data = ex.ToString();
+
                     return respuesta;
                 }
             }
@@ -82,6 +85,7 @@ namespace prueba_willinton_morales_back.Services
                     cmd.ExecuteNonQuery();
                     respuesta.Mensaje = "Paciente actualizado correctamente";
                     respuesta.Estado = true;
+
                     return respuesta;
                 }
                 catch (System.Exception ex)
@@ -89,6 +93,7 @@ namespace prueba_willinton_morales_back.Services
                     respuesta.Mensaje = "Error al actualizar paciente";
                     respuesta.Estado = false;
                     respuesta.Data = ex.ToString();
+
                     return respuesta;
                 }
             }
@@ -117,6 +122,7 @@ namespace prueba_willinton_morales_back.Services
                     cmd.ExecuteNonQuery();
                     respuesta.Mensaje = "Paciente eliminado correctamente";
                     respuesta.Estado = true;
+
                     return respuesta;
                 }
                 catch (System.Exception ex)
@@ -124,6 +130,7 @@ namespace prueba_willinton_morales_back.Services
                     respuesta.Mensaje = "Error al eliminar paciente";
                     respuesta.Estado = false;
                     respuesta.Data = ex.ToString();
+
                     return respuesta;
                 }
             }

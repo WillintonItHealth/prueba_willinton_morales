@@ -7,14 +7,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using prueba_willinton_morales_back.Interfaces;
-using prueba_willinton_morales_back.Services;
+using prueba_willinton_morales.Interfaces;
+using prueba_willinton_morales.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace prueba_willinton_morales_back
+namespace prueba_willinton_morales
 {
     public class Startup
     {

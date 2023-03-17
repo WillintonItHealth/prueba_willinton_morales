@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using prueba_willinton_morales_back.Interfaces;
-using prueba_willinton_morales_back.Models;
+using prueba_willinton_morales.Interfaces;
+using prueba_willinton_morales.Models;
 using System.Collections.Generic;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace prueba_willinton_morales_back.Controllers
+namespace prueba_willinton_morales.Controllers
 {
     
     [ApiController]

@@ -1,8 +1,8 @@
-CREATE DATABASE prueba_willinton_morales
+CREATE DATABASE db_prueba_willinton_morales
 
-USE prueba_willinton_morales
+USE db_prueba_willinton_morales
 
-CREATE TABLE pacientes 
+CREATE TABLE tb_pacientes 
 (
 	id int primary key identity (1,1),
 	IdTipoDocumento int,
@@ -15,23 +15,23 @@ CREATE TABLE pacientes
 	EstadoAfiliacion bit
 )
 
-INSERT INTO pacientes (IdTipoDocumento, NumeroDocumento, Nombres, Apellidos, Correo, Telefono, FechaNacimiento, EstadoAfiliacion)
+INSERT INTO tb_pacientes (IdTipoDocumento, NumeroDocumento, Nombres, Apellidos, Correo, Telefono, FechaNacimiento, EstadoAfiliacion)
 VALUES (1, '26873498', 'Andrea Carolina', 'Perez Ramirez', 'acpr@correo.co', '3115648792', '2000-08-22', 1)
 
-CREATE TABLE tipoDocumento 
+CREATE TABLE tb_tipoDocumento 
 (
 	id int primary key identity (1,1),
 	AbreviaturaTipo varchar(2),
 	TipoDocumento varchar(30)
 )
 
-SELECT * FROM tipoDocumento
+SELECT * FROM tb_tipoDocumento
 
-INSERT INTO tipoDocumento (AbreviaturaTipo, TipoDocumento)
+INSERT INTO tb_tipoDocumento (AbreviaturaTipo, TipoDocumento)
 VALUES ('CC', 'Cédula de Ciudadania')
-INSERT INTO tipoDocumento (AbreviaturaTipo, TipoDocumento)
+INSERT INTO tb_tipoDocumento (AbreviaturaTipo, TipoDocumento)
 VALUES ('TI', 'Tarjeta de Identidad')
-INSERT INTO tipoDocumento (AbreviaturaTipo, TipoDocumento)
+INSERT INTO tb_tipoDocumento (AbreviaturaTipo, TipoDocumento)
 VALUES ('RC', 'Registro Civil')
-INSERT INTO tipoDocumento (AbreviaturaTipo, TipoDocumento)
+INSERT INTO tb_tipoDocumento (AbreviaturaTipo, TipoDocumento)
 VALUES ('PA', 'Pasaporte')
