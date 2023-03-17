@@ -1,0 +1,8 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/Solucion/prueba_willinton_morales_back/.vs/prueba_willinton_morales_back
+/Solucion/prueba_willinton_morales_back/prueba_willinton_morales_back/bin/Debug/net5.0
+/Solucion/prueba_willinton_morales_back/prueba_willinton_morales_back/obj
+/Solucion/prueba_willinton_morales_back/prueba_willinton_morales_back/Properties
