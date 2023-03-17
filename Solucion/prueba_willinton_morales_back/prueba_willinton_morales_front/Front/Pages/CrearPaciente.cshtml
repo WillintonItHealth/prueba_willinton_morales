@@ -1,6 +1,32 @@
 ﻿@page
 @model Front.Pages.UsuarioModel
 
+@{
+    /*if (IsPost)
+    {
+        string TipoDocumento = Request.Form["TipoDocumento"];
+        string Documento = Request.Form["Documento"];
+        string Nombres = Request.Form["Nombres"];
+        string Apellidos = Request.Form["Apellidos"];
+        string Correo = Request.Form["Correo"];
+        string Telefono = Request.Form["Telefono"];
+        string FechaNacimiento = Request.Form["FechaNacimiento"];
+        string EstadoActivacion = Request.Form["EstadoActivacion"];
+        
+
+        <text>
+            Paciente Ingresado: <br />
+            TipoDocumento: @TipoDocumento <br />
+            Nombres: @Nombres <br />
+            Apellidos: @Apellidos <br />
+            Correo: @Correo <br />
+            Telefono: @Telefono <br />
+            FechaNacimiento: @FechaNacimiento <br />
+            EstadoActivacion: @EstadoActivacion <br />
+        </text>
+    }*/
+}
+
 
 <!DOCTYPE html>
 <html>
@@ -8,12 +34,17 @@
     <title>Paciente Form</title>
 </head>
 <body>
-    <form method="post">
+    <form method="Post">
         <fieldset>
             <legend>Añadir Paciente</legend>
             <div>
-                <label for="Tipo Documento">Tipo Documento:</label>
-                <input type="text" name="Tipo Documento" value="" />
+                <label for="TipoDocumento">Tipo Documento:</label>
+                <select id="TipoDocumento" name="TipoDocumento">
+                    <option value="1">CC</option>
+                    <option value="2">TI</option>
+                    <option value="3">RC</option>
+                    <option value="4">PA</option>
+                </select>
             </div>
             <div>
                 <label for="Documento">Documento:</label>
