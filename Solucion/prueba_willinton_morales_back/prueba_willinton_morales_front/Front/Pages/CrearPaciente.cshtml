@@ -1,0 +1,55 @@
+﻿@page
+@model Front.Pages.UsuarioModel
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paciente Form</title>
+</head>
+<body>
+    <form method="post">
+        <fieldset>
+            <legend>Añadir Paciente</legend>
+            <div>
+                <label for="Tipo Documento">Tipo Documento:</label>
+                <input type="text" name="Tipo Documento" value="" />
+            </div>
+            <div>
+                <label for="Documento">Documento:</label>
+                <input type="text" name="Documento" value="" />
+            </div>
+            <div>
+                <label for="Nombres">Nombres:</label>
+                <input type="text" name="Nombres" value="" />
+            </div>
+            <div>
+                <label for="Apellidos">Apellidos:</label>
+                <input type="text" name="Apellidos" value="" />
+            </div>
+
+            <div>
+                <label for="Correo">Correo Electrónico:</label>
+                <input type="email" name="Correo" value="" />
+            </div>
+            <div>
+                <label for="Telefono">Número Teléfonico:</label>
+                <input type="tel" name="Telefono" value="" />
+            </div>
+            <div>
+                <label for="FechaNacimiento">Fecha de nacimiento:</label>
+                <input type="date" name="FechaNacimiento" value="" />
+            </div>
+            <div>
+                <label for="EstadoActivacion">Estado de activación:</label>
+                <input type="checkbox" name="EstadoActivacion" value="" />
+            </div>
+
+            <div>
+                <label>&nbsp;</label>
+                <input type="submit" value="Submit" class="submit" />
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
