@@ -1,4 +1,6 @@
-﻿namespace prueba_willinton_morales.Models
+﻿using System;
+
+namespace prueba_willinton_morales.Models
 {
     /// <summary>
     /// Modelo con los datos del paciente
@@ -32,7 +34,7 @@
         /// <summary>
         /// Fecha de nacimiento del paciente. Tipo DateTime
         /// </summary>
-        public string FechaNacimiento { get; set; }
+        public DateTime FechaNacimiento { get; set; }
         /// <summary>
         /// Estado de la afiliacion. Tipo bool
         /// </summary>

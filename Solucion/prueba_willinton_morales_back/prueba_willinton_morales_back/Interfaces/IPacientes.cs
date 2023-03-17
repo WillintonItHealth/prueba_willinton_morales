@@ -7,5 +7,6 @@ namespace prueba_willinton_morales.Interfaces
         Respuesta CrearPaciente(PacienteModel paciente);
         Respuesta ActualizarPaciente(int id, PacienteModel paciente);
         Respuesta EliminarPaciente(int id);
+        Respuesta ListarPacientes();
     }
 }

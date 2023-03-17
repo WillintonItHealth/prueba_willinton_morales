@@ -10,15 +10,15 @@ CREATE PROCEDURE sp_CrearPaciente
 	@EstadoAfiliacion bit
 )
 AS BEGIN
-	INSERT INTO pacientes 
+	INSERT INTO tb_pacientes 
 	(
-		IdTipoDocumento, 
-		NumeroDocumento, 
-		Nombres, 
-		Apellidos, 
-		Correo, 
+		IdTipoDocumento,
+		NumeroDocumento,
+		Nombres,
+		Apellidos,
+		Correo,
 		Telefono, 
-		FechaNacimiento, 
+		FechaNacimiento,
 		EstadoAfiliacion
 	)
 	VALUES
@@ -48,7 +48,7 @@ CREATE PROCEDURE sp_ActualizarPaciente
 	@EstadoAfiliacion bit
 )
 AS BEGIN
-	UPDATE pacientes 
+	UPDATE tb_pacientes 
 	SET
 		IdTipoDocumento = @IdTipoDocumento, 
 		NumeroDocumento = @NumeroDocumento, 
@@ -65,12 +65,12 @@ END
 GO
 CREATE PROCEDURE sp_EliminarPaciente (@id int)
 AS BEGIN
-	DELETE FROM pacientes 
+	DELETE FROM tb_pacientes 
 	WHERE id = @id
 END
 
 GO
 CREATE PROCEDURE sp_ListarTipoDocumento
 AS BEGIN
-	SELECT * FROM tipoDocumento
+	SELECT * FROM tb_tipoDocumento
 END

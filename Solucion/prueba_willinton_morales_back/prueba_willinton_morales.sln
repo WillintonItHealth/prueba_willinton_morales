@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Back", "prueba_willinton_morales_back\Back.csproj", "{9A0422BB-3E0E-4586-B1F1-81B909395B97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Front", "prueba_willinton_morales_front\Front\Front.csproj", "{1AD3EE8B-A29D-4CA5-8A0D-505C0990B321}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Front", "prueba_willinton_morales_front\Front\Front.csproj", "{1AD3EE8B-A29D-4CA5-8A0D-505C0990B321}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

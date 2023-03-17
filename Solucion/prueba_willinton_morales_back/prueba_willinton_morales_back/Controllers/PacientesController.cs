@@ -30,6 +30,17 @@ namespace prueba_willinton_morales.Controllers
         }
 
         /// <summary>
+        /// Listar todos los Pacientes
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("api/ListarPacientes")]
+        public Respuesta Get()
+        {
+            return pacientes.ListarPacientes();
+        }
+
+        /// <summary>
         /// Actualizar Paciente
         /// </summary>
         /// <param name="id"></param>

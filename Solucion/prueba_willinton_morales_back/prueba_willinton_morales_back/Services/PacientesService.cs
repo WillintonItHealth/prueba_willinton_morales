@@ -2,6 +2,8 @@
 
 using prueba_willinton_morales.Interfaces;
 using prueba_willinton_morales.Models;
+using System.Collections.Generic;
+using System;
 using System.Data.SqlClient;
 using System.Net.Http;
 
@@ -85,6 +87,66 @@ namespace prueba_willinton_morales.Services
                     cmd.ExecuteNonQuery();
                     respuesta.Mensaje = "Paciente actualizado correctamente";
                     respuesta.Estado = true;
+
+                    return respuesta;
+                }
+                catch (System.Exception ex)
+                {
+                    respuesta.Mensaje = "Error al actualizar paciente";
+                    respuesta.Estado = false;
+                    respuesta.Data = ex.ToString();
+
+                    return respuesta;
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// Metodo Listar pacientes
+        /// </summary>
+        /// <returns></returns>
+        public Respuesta ListarPacientes()
+        {
+            using (SqlConnection sqlcn = new SqlConnection(DbConnection.Connection))
+            {
+                /*
+                 * SP de actualizacion
+                 */
+                SqlCommand cmd = new SqlCommand("sp_ListarPacientes", sqlcn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                List<PacienteModel> pacientes = new List<PacienteModel>();
+
+                var respuesta = new Respuesta();
+                try
+                {
+                    sqlcn.Open();
+                    cmd.ExecuteNonQuery();
+
+                    using (SqlDataReader sqldr = cmd.ExecuteReader())
+                    {
+                        if (sqldr.HasRows)
+                        {
+                            while (sqldr.Read())
+                            {
+                                PacienteModel paciente = new PacienteModel();
+                                paciente.IdTipoDocumento = Convert.ToInt32(sqldr["IdTipoDocumento"]);
+                                paciente.NumeroDocumento = sqldr["NumeroDocumento"].ToString();
+                                paciente.Nombres = sqldr["Nombres"].ToString();
+                                paciente.Apellidos = sqldr["Apellidos"].ToString();
+                                paciente.Correo = sqldr["Correo"].ToString();
+                                paciente.Telefono = sqldr["Telefono"].ToString();
+                                paciente.FechaNacimiento = Convert.ToDateTime(sqldr["FechaNacimiento"]);
+                                paciente.EstadoAfiliacion = Convert.ToBoolean(sqldr["EstadoAfiliacion"]);
+                                pacientes.Add(paciente);
+                            }
+                        }
+                    }
+
+                    respuesta.Mensaje = "Lista de Pacientes retornada correctamente";
+                    respuesta.Estado = true;
+                    respuesta.Data = pacientes;
 
                     return respuesta;
                 }
